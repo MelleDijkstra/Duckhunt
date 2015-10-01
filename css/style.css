@@ -1,0 +1,55 @@
+/*
+
+    File: style.css for the Duckhunt project
+    Authors: Anton Prins & Melle Dijkstra
+
+*/
+* {
+    outline: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: #64b0fe url("../images/grass.png") repeat-x bottom;
+    cursor: url(../images/custom-cursor.png) 20 20, auto;
+}
+
+#title {
+    text-align: center;
+}
+
+#log {
+    position: absolute;
+    padding: 2px 5px;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: scroll;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: auto;
+    z-index: 500;
+}
+
+#log li:before {
+    content: "- ";
+    color: #269abc;
+}
+
+#log li {
+    font-size: 10px;
+    color: #CECECE;
+}
