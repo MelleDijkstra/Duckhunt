@@ -1,12 +1,50 @@
-function log(message) {
-    var logger = $("#log");
-    logger.append("<li>"+message+"</li>");
+var logger = $("#log");
+var developer = false;
+
+////// basic functions //////
+function getRandNum(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-$(document).ready(function() {
-    if(window.jQuery) {
-        log("jQuery loaded");
-        log("Something else");
-        log("created something");
+function enableDev() {
+    developer = true;
+    log("Developer mode is on");
+}
+
+function checkLogCount() {
+    if(developer) {
+        if ($("#log").find("li").length > 0) {
+            logger.show();
+        } else {
+            logger.hide();
+        }
     }
+}
+
+function log(message) {
+    if(developer) {
+        if(message != '') {
+            logger.append("<li>"+message+"</li>");
+        }
+        checkLogCount();
+    }
+}
+
+///////////////////////////
+
+$(document).ready(function() {
+
+    if(window.jQuery) {
+        console.log("jQuery loaded");
+    }
+
+    // check if user clicked duck
+    $("main").click(function(e) {
+        var target = $(e.target);
+
+        // if bird is hit
+        if(target.is(".bird")) {
+            log("Bird hit!");
+        }
+    });
 });

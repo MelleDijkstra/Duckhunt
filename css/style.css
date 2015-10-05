@@ -27,7 +27,17 @@ main {
     text-align: center;
 }
 
+/* BIRD */
+
+.bird {
+    width: 150px;
+    height: auto;
+}
+
+/* LOGGING */
+
 #log {
+    display: none;
     position: absolute;
     padding: 2px 5px;
     margin: 0;
@@ -45,8 +55,8 @@ main {
 }
 
 #log li:before {
-    content: "- ";
-    color: #269abc;
+    content: "> ";
+    color: #a5afab;
 }
 
 #log li {
