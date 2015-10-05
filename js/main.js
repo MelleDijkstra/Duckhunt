@@ -27,7 +27,13 @@ function log(message) {
             logger.append("<li>"+message+"</li>");
         }
         checkLogCount();
+        Scroll();
     }
+}
+function Scroll()
+{
+    var objControl=document.getElementById("log");
+    objControl.scrollTop = objControl.scrollHeight;
 }
 
 ///////////////////////////
