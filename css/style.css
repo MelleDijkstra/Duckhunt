@@ -30,8 +30,11 @@ main {
 /* BIRD */
 
 .bird {
-    width: 150px;
+    position: absolute;
+    width: auto;
     height: auto;
+    background-image: url('../images/duck.gif');
+    z-index: 1000;
 }
 
 /* LOGGING */
@@ -62,4 +65,18 @@ main {
 #log li {
     font-size: 10px;
     color: #CECECE;
+}
+
+#dashboard {
+    display: block;
+    margin: 10px auto;
+    min-width:100px;
+    max-width: 500px;
+    background-color: #bbbab9;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#dashboard button {
+    margin: 0;
 }
