@@ -34,14 +34,16 @@ main {
 
 /* BIRD */
 
-.target {
-    position: absolute;
-    height: 148px;
-    width: 120px;
-    background: url(../images/target_sprite_s.png) 20px 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60px 60px;
+.targetnormal {
+    width: 53px;
+    height: 71px;
+    background: url(../images/target_sprite_s.png) 0 0;
+}
+.targetdead {
+    width: 53px;
+    height: 71px;
+    background: url(../images/target_sprite_s.png) 0 -71px;
+
 }
 
 /* LOGGING */

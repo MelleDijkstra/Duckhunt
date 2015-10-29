@@ -3,7 +3,7 @@
  */
 var target = {
     create: function() {
-        var element = $('<div class="target"></div>');
+        var element = $('<div class="targetnormal">');
         $('main').append(element);
         log("Bird created");
     },
