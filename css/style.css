@@ -42,8 +42,7 @@ main {
 .targetdead {
     width: 53px;
     height: 71px;
-    background: url(../images/target_sprite_s.png) 0 -71px;
-
+    background: url(../images/target_sprite_s.png) -71px 0;
 }
 
 /* LOGGING */
