@@ -58,7 +58,7 @@ function disableRightClick() {
 function loadLevel(level) {
     switch(level) {
         case 'level1':
-            
+
     }
 }
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
         // if target is hit
         if(target.is(".target")) {
-            log("Bird hit!");
+            log("Target hit!");
         }
     });
 });
