@@ -58,7 +58,7 @@ function disableRightClick() {
 function loadLevel(level) {
     switch(level) {
         case 'level1':
-
+            
     }
 }
 

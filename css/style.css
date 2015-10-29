@@ -14,6 +14,10 @@ body {
 }
 
 main {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
     overflow: hidden;
     position: relative;
     width: 1000px;
@@ -31,14 +35,12 @@ main {
 /* BIRD */
 
 .target {
-    position: absolute;
     width: auto;
     height: auto;
     z-index: 1000;
     left: 0;
     top: 50px;
-    background-size: 20px 20px;
-    background: url(../images/target_sprite.png) 0 0;
+    background-image: url(../images/target_sprite.png);
 }
 
 /* LOGGING */
