@@ -8,6 +8,6 @@ var target = {
         log("Bird created");
     },
     fly: function() {
-        
+
     }
 };

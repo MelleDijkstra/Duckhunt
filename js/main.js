@@ -53,12 +53,20 @@ function disableRightClick() {
     });
 }
 
+var Bird = function () {
+    this.something = 5;
+};
+
 ///////////////////////////
 
 function loadLevel(level) {
+    // load the given level
     switch(level) {
-        case 'level1':
-
+        case '1':
+            // loop to create multiple birds
+            for(var i = 0;i < 4;i++) {
+                var bird = new Bird();
+            }
     }
 }
 
@@ -67,16 +75,18 @@ $(document).ready(function() {
     jQueryCheck();
     disableRightClick();
 
-    loadLevel('leve1');
+    loadLevel('1');
 
     // check if user clicked duck
     $("main").click(function(e) {
-        log("Shot fired");
-        var target = $(e.target);
+        var target = $(e.target).attr("class");
 
-        // if target is hit
-        if(target.is(".target")) {
-            log("Target hit!");
+        switch(target) {
+            case 'targetnormal':
+                log("Target hit!");
+                break;
+            default:
+                log("Shot fired");
         }
     });
 });
