@@ -79,11 +79,13 @@ $(document).ready(function() {
 
     // check if user clicked duck
     $("main").click(function(e) {
+        var elem = $(e.target);
         var target = $(e.target).attr("class");
 
         switch(target) {
             case 'targetnormal':
-                log("Target hit!");
+                elem.removeClass("targetnormal");
+                elem.addClass("targetdead");
                 break;
             default:
                 log("Shot fired");
