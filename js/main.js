@@ -7,8 +7,10 @@ function getRandNum(min,max) {
 }
 
 function enableDev() {
-    developer = true;
-    log("Developer mode is on");
+    if(!developer) {
+        developer = true;
+        log("Developer mode is on");
+    }
 }
 
 function checkLogCount() {
@@ -30,6 +32,7 @@ function log(message) {
         Scroll();
     }
 }
+
 function Scroll()
 {
     var objControl=document.getElementById("log");
@@ -44,15 +47,31 @@ function jQueryCheck() {
     }
 }
 
+function disableRightClick() {
+    $("main").bind("contextmenu", function(e) {
+        e.preventDefault();
+    });
+}
+
 ///////////////////////////
 
-$(document).ready(function() {
-    jQueryCheck();
+function loadLevel(level) {
+    switch(level) {
+        case 'level1':
 
-    target.create();
+    }
+}
+
+$(document).ready(function() {
+    // run init functions when page is loaded
+    jQueryCheck();
+    disableRightClick();
+
+    loadLevel('leve1');
 
     // check if user clicked duck
     $("main").click(function(e) {
+        log("Shot fired");
         var target = $(e.target);
 
         // if target is hit
