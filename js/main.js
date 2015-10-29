@@ -36,20 +36,27 @@ function Scroll()
     objControl.scrollTop = objControl.scrollHeight;
 }
 
+function jQueryCheck() {
+    if(window.jQuery) {
+        console.log("jQuery loaded");
+    } else {
+        console.log("jQuery not loaded");
+    }
+}
+
 ///////////////////////////
 
 $(document).ready(function() {
+    jQueryCheck();
 
-    if(window.jQuery) {
-        console.log("jQuery loaded");
-    }
+    target.create();
 
     // check if user clicked duck
     $("main").click(function(e) {
         var target = $(e.target);
 
-        // if bird is hit
-        if(target.is(".bird")) {
+        // if target is hit
+        if(target.is(".target")) {
             log("Bird hit!");
         }
     });

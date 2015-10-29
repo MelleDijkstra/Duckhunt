@@ -9,19 +9,15 @@
 </head>
 <body>
     <h1 id="title">Duckhunt project</h1>
+    <!-- main is the game field -->
     <main>
-        <img id="duck1" class="bird" src="images/duck.gif" alt="duck" />
-        <img id="duck2" class="bird" src="images/duck.gif" alt="duck" />
-        <img id="duck3" class="bird" src="images/duck.gif" alt="duck" />
-        <img id="duck4" class="bird" src="images/duck.gif" alt="duck" />
-        <img id="duck5" class="bird" src="images/duck.gif" alt="duck" />
         <!-- Logging section -->
         <ul id="log">
         </ul>
     </main>
         <button style="display: block;margin: 10px auto;" type="button" onClick="enableDev()">Developer Mode</button>
     <div id="dashboard">
-        <button type="button" onClick="bird.create()">Create Bird</button>
+        <button type="button" onClick="target.create()">Create Bird</button>
     </div>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bird.js"></script>
